@@ -1,0 +1,14 @@
+version: "3.0"
+services:
+  python:
+    build: python
+    environment:
+      TABPY_PORT: 9004
+      TABPY_EVALUATE_TIMEOUT: 600
+      API_TOKEN_NAME: Metadata API Access
+      API_SECRET_TOKEN: Avu2ek0fT6WQyjazOj9CpA==:O3joBJSO60PnBvktsjqNDiK8iMGKCWMR
+      API_SERVER: healthcare.tableau.com
+    ports:
+      - "9004:9004"
+    volumes:
+      - ./python:/usr/src/app
